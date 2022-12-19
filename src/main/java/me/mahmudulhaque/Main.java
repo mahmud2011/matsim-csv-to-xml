@@ -11,7 +11,10 @@ public class Main {
         csvReader.readCSV("input.csv");
         List<String[]> csvList = csvReader.getCSVAsList();
 
-        CottbusXML xmlDom = new CottbusXML();
+//        CottbusXML xmlDom = new CottbusXML();
+//        Document doc = xmlDom.docBuilder(csvList);
+
+        RoadPriceXML xmlDom = new RoadPriceXML();
         Document doc = xmlDom.docBuilder(csvList);
 
         XMLWriter xmlWriter = new XMLWriter();
